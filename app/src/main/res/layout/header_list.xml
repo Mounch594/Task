@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="400dp"
+    android:padding="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:background="#fe5723" >
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/headerlistprflpic"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/profileimage"
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        app:civ_border_width="3dp"
+        app:civ_border_color="#fff"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mounika"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:id="@+id/headerlistdrivername"
+        android:layout_alignTop="@+id/headerlistprflpic"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/headerlistprflpic"
+        android:layout_toEndOf="@+id/headerlistprflpic" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="8297069145"
+        android:textSize="17dp"
+        android:textColor="#fff"
+        android:id="@+id/headerlistdrivernum"
+        android:layout_below="@+id/headerlistdrivername"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/headerlistprflpic"
+        android:layout_toEndOf="@+id/headerlistprflpic" />
+
+</RelativeLayout>

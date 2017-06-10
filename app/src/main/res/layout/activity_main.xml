@@ -1,0 +1,177 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Main Activity -->
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="4">
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#fe5723"
+                android:elevation="5dp"
+                app:titleTextColor="#fff"
+                android:minHeight="?attr/actionBarSize" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="vertical"
+                    android:weightSum="2"
+                    android:layout_weight="1.7">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:weightSum="1"
+                        android:layout_weight="1.5">
+                        <FrameLayout
+                            xmlns:android="http://schemas.android.com/apk/res/android"
+                            android:layout_width="match_parent"
+                            android:layout_gravity="bottom"
+                            android:layout_height="match_parent">
+
+                            <com.hejunlin.superindicatorlibray.LoopViewPager
+                                android:id="@+id/viewpager"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+
+                        </FrameLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:background="#000"
+                        android:weightSum="2"
+                        android:orientation="vertical"
+                        android:layout_weight="0.5">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1.5"
+                            android:weightSum="10"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_weight="1.5"
+                                android:id="@+id/play"
+                                android:src="@drawable/play"/>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="8.5"
+                                android:weightSum="2"
+                                android:layout_gravity="center"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0.9"
+                                    android:textSize="13dp"
+                                    android:gravity="start"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:textStyle="bold"
+                                    android:textColor="#fff"
+                                    android:text="chain smoker new album 2016"/>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0.8"
+                                    android:textSize="10dp"
+                                    android:gravity="start"
+                                    android:layout_marginTop="3dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:textColor="#fff"
+                                    android:text="ft.rihana and user"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.5"
+                            android:orientation="horizontal">
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dimen_40dp"
+                            android:layout_gravity="bottom"
+                            android:background="@drawable/looper_bottom_bg">
+
+                            <com.hejunlin.superindicatorlibray.CircleIndicator
+                                android:id="@+id/indicator"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_gravity="right|center_vertical"
+                                android:layout_marginRight="5dp"
+                                android:gravity="bottom"
+                                android:orientation="horizontal" />
+
+                        </FrameLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="vertical"
+                    android:background="#f3f3f3"
+                    android:layout_weight="2.3">
+
+                    <android.support.design.widget.TabLayout
+                        android:id="@+id/TabLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:elevation="50dp"
+                        app:tabTextColor="#fe5723"
+                        app:tabMaxWidth="0dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingTop="5dp"
+                        app:tabGravity="fill"
+                        app:tabMode="fixed"
+                        android:background="#fff"
+                        app:tabIndicatorColor="#fe5723"
+                        android:minHeight="?attr/actionBarSize"
+                        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/taskPager"
+                        android:layout_width="match_parent"
+                        android:background="#f3f3f3"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="fill_parent"
+                        android:elevation="5dp"/>
+
+
+                </LinearLayout>
+        </LinearLayout>
+        <ListView
+            android:id="@+id/left_drawer"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="#fff"
+            android:choiceMode="singleChoice"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="0dp" />
+
+    </android.support.v4.widget.DrawerLayout>
+
+</LinearLayout>
